@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import React from "react"
+import React from "react";
 
-import { useState } from "react"
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Card, CardContent } from "@/components/ui/card"
+import { useState } from "react";
+import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardContent } from "@/components/ui/card";
 
 const contactInfo = [
   {
@@ -34,7 +34,7 @@ const contactInfo = [
     value: "Seg - Sex: 8h às 19h",
     detail: "Sábado: 8h às 12h",
   },
-]
+];
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -42,15 +42,18 @@ export function Contact() {
     email: "",
     phone: "",
     message: "",
-  })
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     const whatsappMessage = encodeURIComponent(
-      `Olá! Meu nome é ${formData.name}. ${formData.message}\n\nE-mail: ${formData.email}\nTelefone: ${formData.phone}`
-    )
-    window.open(`https://wa.me/5511999999999?text=${whatsappMessage}`, "_blank")
-  }
+      `Olá! Meu nome é ${formData.name}. ${formData.message}\n\nE-mail: ${formData.email}\nTelefone: ${formData.phone}`,
+    );
+    window.open(
+      `https://wa.me/5511999999999?text=${whatsappMessage}`,
+      "_blank",
+    );
+  };
 
   return (
     <section id="contato" className="py-16 md:py-24">
@@ -63,7 +66,7 @@ export function Contact() {
             Vamos Conversar?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Entre em contato para agendar uma consulta ou tirar suas dúvidas. 
+            Entre em contato para agendar uma consulta ou tirar suas dúvidas.
             Estou aqui para ajudar você e sua família.
           </p>
         </div>
@@ -77,9 +80,15 @@ export function Contact() {
                     <info.icon className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">{info.label}</p>
-                    <p className="font-semibold text-foreground">{info.value}</p>
-                    <p className="text-sm text-muted-foreground">{info.detail}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {info.label}
+                    </p>
+                    <p className="font-semibold text-foreground">
+                      {info.value}
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      {info.detail}
+                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -94,19 +103,27 @@ export function Contact() {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-foreground mb-2"
+                    >
                       Nome Completo
                     </label>
                     <Input
                       id="name"
                       placeholder="Seu nome"
                       value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, name: e.target.value })
+                      }
                       required
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-foreground mb-2"
+                    >
                       E-mail
                     </label>
                     <Input
@@ -114,25 +131,35 @@ export function Contact() {
                       type="email"
                       placeholder="seu@email.com"
                       value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, email: e.target.value })
+                      }
                       required
                     />
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Telefone / WhatsApp
                   </label>
                   <Input
                     id="phone"
                     placeholder="(11) 99999-9999"
                     value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, phone: e.target.value })
+                    }
                     required
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Mensagem
                   </label>
                   <Textarea
@@ -140,7 +167,9 @@ export function Contact() {
                     placeholder="Conte um pouco sobre o que você precisa..."
                     rows={4}
                     value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, message: e.target.value })
+                    }
                     required
                   />
                 </div>
@@ -154,5 +183,5 @@ export function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import { Users, Clock, Award, Heart } from "lucide-react"
+import { Users, Clock, Award, Heart } from "lucide-react";
 
 const stats = [
   {
@@ -25,7 +25,7 @@ const stats = [
     label: "Satisfação",
     description: "dos pais",
   },
-]
+];
 
 export function Stats() {
   return (
@@ -33,8 +33,9 @@ export function Stats() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <p className="font-serif text-2xl md:text-3xl text-foreground font-medium max-w-3xl mx-auto text-balance">
-            Sara Soares tem experiência em psicologia infantil, ajudando crianças 
-            a desenvolverem habilidades emocionais e comportamentais saudáveis.
+            Sara Soares tem experiência em psicologia infantil, ajudando
+            crianças a desenvolverem habilidades emocionais e comportamentais
+            saudáveis.
           </p>
         </div>
 
@@ -45,14 +46,20 @@ export function Stats() {
                 <stat.icon className="w-6 h-6 text-primary" />
               </div>
               <div className="mb-1">
-                <span className="text-4xl md:text-5xl font-bold text-foreground">{stat.value}</span>
-                <span className="text-lg font-medium text-muted-foreground ml-1">{stat.label}</span>
+                <span className="text-4xl font-bold text-foreground">
+                  {stat.value}
+                </span>
+                <span className="text-lg font-medium text-muted-foreground ml-1">
+                  {stat.label}
+                </span>
               </div>
-              <p className="text-sm text-muted-foreground">{stat.description}</p>
+              <p className="text-sm text-muted-foreground">
+                {stat.description}
+              </p>
             </div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

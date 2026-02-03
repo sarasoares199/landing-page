@@ -1,11 +1,11 @@
-import Link from "next/link"
-import { Heart, Instagram, Facebook, Linkedin } from "lucide-react"
+import Link from "next/link";
+import { Heart, Instagram, Facebook, Linkedin } from "lucide-react";
 
 const socialLinks = [
   { icon: Instagram, href: "#", label: "Instagram" },
   { icon: Facebook, href: "#", label: "Facebook" },
   { icon: Linkedin, href: "#", label: "LinkedIn" },
-]
+];
 
 const quickLinks = [
   { href: "#inicio", label: "Início" },
@@ -14,7 +14,7 @@ const quickLinks = [
   { href: "#abordagens", label: "Abordagens" },
   { href: "#depoimentos", label: "Depoimentos" },
   { href: "#contato", label: "Contato" },
-]
+];
 
 export function Footer() {
   return (
@@ -26,11 +26,13 @@ export function Footer() {
               <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
                 <Heart className="w-5 h-5 text-primary-foreground" />
               </div>
-              <span className="font-serif text-xl font-semibold">Sara Soares</span>
+              <span className="font-serif text-xl font-semibold">
+                Sara Soares
+              </span>
             </Link>
             <p className="text-background/70 text-sm leading-relaxed mb-4">
-              Psicóloga infantil dedicada ao desenvolvimento emocional 
-              e bem-estar das crianças e suas famílias.
+              Psicóloga infantil dedicada ao desenvolvimento emocional e
+              bem-estar das crianças e suas famílias.
             </p>
             <div className="flex items-center gap-4">
               {socialLinks.map((social) => (
@@ -75,13 +77,12 @@ export function Footer() {
 
         <div className="border-t border-background/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-background/60">
-            &copy; {new Date().getFullYear()} Sara Soares Psicologia. Todos os direitos reservados.
+            &copy; {new Date().getFullYear()} Sara Soares Psicologia. Todos os
+            direitos reservados.
           </p>
-          <p className="text-sm text-background/60">
-            CRP XX/XXXXX
-          </p>
+          <p className="text-sm text-background/60">CRP XX/XXXXX</p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

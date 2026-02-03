@@ -22,7 +22,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="#inicio" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-[#6C6761] flex items-center justify-center">
+            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
               <Heart className="w-5 h-5 text-primary-foreground" />
             </div>
             <span className="font-serif text-xl font-semibold text-foreground">
@@ -30,7 +30,7 @@ export function Header() {
             </span>
           </a>
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -42,15 +42,15 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="hidden md:block">
-            <Button asChild className="bg-[#6C6761] hover:bg-[#6C6761]/90">
+          <div className="hidden lg:block">
+            <Button asChild>
               <a href="#contato">Agendar Consulta</a>
             </Button>
           </div>
 
           <button
             type="button"
-            className="md:hidden p-2"
+            className="lg:hidden p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -64,7 +64,7 @@ export function Header() {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden bg-background border-b border-border">
+        <div className="lg:hidden bg-background border-b border-border">
           <nav className="flex flex-col px-4 py-4 gap-4">
             {navLinks.map((link) => (
               <a
@@ -76,10 +76,7 @@ export function Header() {
                 {link.label}
               </a>
             ))}
-            <Button
-              asChild
-              className="w-full mt-2 bg-[#6C6761] hover:bg-[#6C6761]/90"
-            >
+            <Button asChild className="w-full mt-2">
               <a href="#contato">Agendar Consulta</a>
             </Button>
           </nav>
