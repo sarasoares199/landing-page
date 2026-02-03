@@ -87,7 +87,7 @@ export function Services() {
               />
             </div>
 
-            <div className="absolute -bottom-6 -right-6 bg-background rounded-xl shadow-lg p-6 border border-border max-w-xs">
+            <div className="absolute -bottom-6 md:-right-6 -right-1 bg-background rounded-xl shadow-lg p-6 border border-border max-w-xs">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shrink-0">
                   <CheckCircle className="w-6 h-6 text-primary-foreground" />
