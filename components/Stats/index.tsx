@@ -46,8 +46,8 @@ export function Stats() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((stat) => (
-            <div key={stat.label} className="text-center">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center">
               <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 mb-4">
                 <stat.icon className="w-6 h-6 text-primary" />
               </div>

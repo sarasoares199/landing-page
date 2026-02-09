@@ -55,8 +55,13 @@ export function Contact() {
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Coluna de Informações (Cartões) */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-4 lg:col-span-1">
-            {contactInfo.map((info) => (
-              <Link href={info.link} target="_blank" rel="noopener noreferrer">
+            {contactInfo.map((info, index) => (
+              <Link
+                key={index}
+                href={info.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Card
                   key={info.label}
                   className="border-border overflow-hidden"
