@@ -1,46 +1,49 @@
-import React from "react"
-import type { Metadata } from 'next'
-import { DM_Sans, Playfair_Display } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
-import './globals.css'
+import React from "react";
+import type { Metadata } from "next";
+import { Outfit, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import "./globals.css";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
-const dmSans = DM_Sans({ subsets: ["latin"], variable: '--font-dm-sans' });
-const playfair = Playfair_Display({ subsets: ["latin"], variable: '--font-playfair' });
+export const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+export const outfit = Outfit({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-outfit",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: 'Sara Soares | Psicóloga Infantil',
-  description: 'Psicóloga especializada em TCC, Terapia ABA, Terapia do Esquema e Ludoterapia. Cuidando do desenvolvimento emocional do seu filho com carinho e profissionalismo.',
-  generator: 'v0.app',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
-  },
-}
+  title: "Sara Soares | Psicóloga",
+  description:
+    "Psicóloga clínica com vários anos de experiência em Terapia Cognitivo-Comportamental (TCC). Especialista em relacionamentos, insegurança emocional e ansiedade infantil. Atendimento online e presencial com acolhimento humanizado e individualizado.",
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${dmSans.variable} ${playfair.variable} font-sans antialiased`}>
+    <html lang="pt-BR" className="scroll-smooth">
+      <body
+        className={`${inter.variable} ${outfit.variable} font-sans antialiased`}
+      >
+        <header>
+          <Header />
+        </header>
         {children}
         <Analytics />
+        <footer>
+          <Footer />
+        </footer>
       </body>
     </html>
-  )
+  );
 }

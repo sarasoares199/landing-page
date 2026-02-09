@@ -1,27 +1,35 @@
-import Image from "next/image"
-import { GraduationCap, Award, Heart, ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
+"use client";
+
+import Image from "next/image";
+import { GraduationCap, Award, Heart, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { useExperienceYears } from "@/hooks/useExperienceYears";
 
 const qualifications = [
   {
     icon: GraduationCap,
     title: "Formação Acadêmica",
-    description: "Graduação em Psicologia com especialização em desenvolvimento infantil",
+    description: "Psicologia | Pós-graduanda em Psicologia Hospitalar",
   },
   {
     icon: Award,
     title: "Especializações",
-    description: "TCC, Terapia ABA, Terapia do Esquema e Ludoterapia",
+    description:
+      "PNL aplicada a Gestão de Pessoas | Psicologia do Trânsito | TCC",
   },
   {
     icon: Heart,
     title: "Missão",
-    description: "Promover saúde emocional e qualidade de vida para crianças e suas famílias",
+    description:
+      "Atendimento ético, humanizado e sensível às diferentes realidades de cada pessoas",
   },
-]
+];
 
 export function About() {
+  const yearsExperience = useExperienceYears(2022);
+  const yearsPSocial = useExperienceYears(2023);
+
   return (
     <section id="sobre" className="py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,7 +46,7 @@ export function About() {
             </div>
             <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-primary rounded-xl flex items-center justify-center">
               <div className="text-center text-primary-foreground">
-                <p className="text-2xl font-bold">8+</p>
+                <p className="text-2xl font-bold">{yearsExperience}+</p>
                 <p className="text-xs">Anos</p>
               </div>
             </div>
@@ -52,25 +60,36 @@ export function About() {
               Olá, eu sou Sara Soares
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Sou psicóloga clínica com mais de 8 anos de experiência no atendimento infantil. 
-              Minha paixão é ajudar crianças a desenvolverem habilidades emocionais que 
-              servirão para toda a vida.
+              Sou psicóloga, com atuação clínica há {yearsExperience} anos,
+              trabalhando a partir da Terapia Cognitivo-Comportamental (TCC),
+              uma abordagem focada na compreensão da relação entre pensamentos,
+              emoções e comportamentos, auxiliando no desenvolvimento de
+              estratégias mais saudáveis para lidar com dificuldades emocionais
+              e relacionais.
             </p>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              Acredito que cada criança é única e merece um atendimento personalizado. 
-              Trabalho em parceria com as famílias para criar um ambiente seguro e 
-              acolhedor onde a criança possa se expressar e crescer.
+              Tenho especialização em Programação Neurolinguística aplicada à
+              Gestão de Pessoas, formação em Psicologia do Trânsito e sou
+              pós-graduanda em Psicologia Hospitalar. Além da prática clínica,
+              atuo há {yearsPSocial} anos como psicóloga social, o que contribui
+              para um olhar ético, humanizado e sensível às diferentes
+              realidades, priorizando um atendimento acolhedor e
+              individualizado.
             </p>
 
             <div className="space-y-4 mb-8">
               {qualifications.map((qual) => (
                 <div key={qual.title} className="flex gap-4">
                   <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center shrink-0">
-                    <qual.icon className="w-5 h-5 text-accent" />
+                    <qual.icon className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground text-sm">{qual.title}</h3>
-                    <p className="text-sm text-muted-foreground">{qual.description}</p>
+                    <h3 className="font-semibold text-foreground text-sm">
+                      {qual.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      {qual.description}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -86,5 +105,5 @@ export function About() {
         </div>
       </div>
     </section>
-  )
+  );
 }

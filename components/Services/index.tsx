@@ -1,30 +1,41 @@
-import Image from "next/image"
-import { Video, Users, BookOpen, CheckCircle } from "lucide-react"
+import Image from "next/image";
+import { Video, Users, BookOpen, CheckCircle, Sparkles } from "lucide-react";
 
 const services = [
   {
     icon: Video,
     title: "Consulta Online",
-    description: "Atendimento por videochamada para maior comodidade da família, mantendo a qualidade do trabalho presencial.",
+    description:
+      "Consultas por videochamada com a mesma qualidade do presencial, proporcionando comodidade e acessibilidade.",
   },
   {
     icon: Users,
     title: "Orientação aos Pais",
-    description: "Sessões dedicadas aos pais para orientação e acompanhamento do desenvolvimento da criança.",
+    description:
+      "Suporte para que a família compreenda os sinais emocionais e contribua para um ambiente mais seguro e saudável.",
+  },
+  {
+    icon: Sparkles,
+    title: "Abordagem Ludica Infantil",
+    description:
+      "Utilizo brincadeiras, jogos e atividades expressivas para auxiliar a criança a reconhecer e comunicar seus sentimentos.",
   },
   {
     icon: BookOpen,
-    title: "Avaliação Psicológica",
-    description: "Avaliação completa para compreender as necessidades específicas de cada criança.",
+    title: "Atendimento Individual Adulto",
+    description:
+      "Trabalho com inseguranças emocionais, padrões de relacionamento e desenvolvimento de autoconfiança.",
   },
-]
+];
 
 const features = [
-  "Ambiente acolhedor e seguro",
-  "Abordagem personalizada",
+  "Ambiente acolhedor e sem julgamentos",
+  "Atendimento individualizado",
   "Parceria com a família",
+  "Olhar ético e humanizado",
+  "Abordagem baseada em TCC",
   "Acompanhamento contínuo",
-]
+];
 
 export function Services() {
   return (
@@ -36,11 +47,13 @@ export function Services() {
               Nossos Serviços
             </span>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance">
-              Oferecemos os melhores serviços de psicologia infantil
+              Atendimento psicologico com qualidade e acolhimento
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Com atendimento de alta qualidade e padrão internacional, 
-              ajudamos crianças a desenvolverem todo seu potencial emocional e cognitivo.
+              Ofereço um espaço seguro onde é possível identificar padrões
+              emocionais, compreender comportamentos repetitivos e aprender a se
+              relacionar de forma mais consciente, tanto com o outro quanto
+              consigo mesmo.
             </p>
 
             <div className="space-y-6 mb-8">
@@ -50,8 +63,12 @@ export function Services() {
                     <service.icon className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">{service.title}</h3>
-                    <p className="text-sm text-muted-foreground">{service.description}</p>
+                    <h3 className="font-semibold text-foreground mb-1">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      {service.description}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -61,14 +78,16 @@ export function Services() {
               {features.map((feature) => (
                 <div key={feature} className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-primary shrink-0" />
-                  <span className="text-sm text-muted-foreground">{feature}</span>
+                  <span className="text-sm text-muted-foreground">
+                    {feature}
+                  </span>
                 </div>
               ))}
             </div>
           </div>
 
           <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+            <div className="aspect-4/3 rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="/images/therapy-session.jpg"
                 alt="Sessão de terapia infantil"
@@ -77,16 +96,18 @@ export function Services() {
                 className="object-cover w-full h-full"
               />
             </div>
-            
-            <div className="absolute -bottom-6 -right-6 bg-background rounded-xl shadow-lg p-6 border border-border max-w-xs">
+
+            <div className="absolute -bottom-6 md:-right-6 -right-1 bg-background rounded-xl shadow-lg p-6 border border-border max-w-xs">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shrink-0">
                   <CheckCircle className="w-6 h-6 text-primary-foreground" />
                 </div>
                 <div>
-                  <p className="font-semibold text-foreground mb-1">Confiança das Famílias</p>
+                  <p className="font-semibold text-foreground mb-1">
+                    Atendimento Humanizado
+                  </p>
                   <p className="text-sm text-muted-foreground">
-                    Mais de 500 famílias confiam em nosso trabalho
+                    Olhar sensível às diferentes realidades de cada pessoa
                   </p>
                 </div>
               </div>
@@ -95,5 +116,5 @@ export function Services() {
         </div>
       </div>
     </section>
-  )
+  );
 }
