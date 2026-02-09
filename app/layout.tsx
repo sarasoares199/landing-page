@@ -22,7 +22,7 @@ export const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Sara Soares | Psicóloga",
   description:
-    "Psicóloga especializada em TCC, Terapia ABA, Terapia do Esquema e Ludoterapia. Cuidando do desenvolvimento emocional do seu filho com carinho e profissionalismo.",
+    "Psicóloga clínica com vários anos de experiência em Terapia Cognitivo-Comportamental (TCC). Especialista em relacionamentos, insegurança emocional e ansiedade infantil. Atendimento online e presencial com acolhimento humanizado e individualizado.",
 };
 
 export default function RootLayout({
