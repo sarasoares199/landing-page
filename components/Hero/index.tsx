@@ -94,8 +94,8 @@ export function Hero() {
               <div className="absolute -inset-4 bg-primary/10 rounded-3xl rotate-3" />
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/hero-psychologist.jpg"
-                  alt="Sara Soares - Psicóloga Infantil"
+                  src="/images/hero-sara.jpg"
+                  alt="Sara Soares - Psicóloga"
                   width={600}
                   height={750}
                   className="object-cover w-full h-full"

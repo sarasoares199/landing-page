@@ -89,11 +89,11 @@ export function Services() {
           <div className="relative">
             <div className="aspect-4/3 rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/images/therapy-session.jpg"
-                alt="Sessão de terapia infantil"
+                src="/images/services-sara.jpg"
+                alt="Sara Soares - Psicóloga"
                 width={600}
                 height={450}
-                className="object-cover w-full h-full"
+                className="object-cover object-top w-full h-full"
               />
             </div>
 
