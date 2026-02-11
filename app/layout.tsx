@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import GTS from "@/components/GTS";
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -42,6 +43,7 @@ export default function RootLayout({
         <Analytics />
         <footer>
           <Footer />
+          <GTS />
         </footer>
       </body>
     </html>
