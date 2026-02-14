@@ -56,12 +56,15 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Psychologist",
               "name": "Psicóloga em Arcoverde - PE | Dra. Sara Soares | Terapia TCC",
+              "image": "https://www.psicologasarasoares.com.br/images/hero-sara.jpg",
+              "description": "Psicóloga clínica especializada em Terapia Cognitivo-Comportamental (TCC). Atendimento presencial e online para adultos e crianças, focando em relacionamentos, ansiedade infantil e bem-estar emocional em Arcoverde, PE.",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Rua Dr. Carlos Howard Bradley, 35 - Centro",
                 "addressLocality": "Arcoverde",
                 "addressRegion": "PE",
-                "postalCode": "56506-000"
+                "postalCode": "56506-000",
+                "addressCountry": "BR"
               },
               "geo": {
                 "@type": "GeoCoordinates",
@@ -70,6 +73,10 @@ export default function RootLayout({
               },
               "url": "https://www.psicologasarasoares.com.br",
               "telephone": "+5587996297153",
+              "sameAs": [
+                "https://www.instagram.com/psi_sarasoares/",
+                "https://wa.me/5587996297153"
+              ],
               "priceRange": "$$"
             })
           }}

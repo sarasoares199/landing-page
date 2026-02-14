@@ -25,7 +25,7 @@ export function Hero() {
             </span>
 
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 text-balance">
-              Cuidando da Sua Saude Mental com Acolhimento
+              Psicóloga em Arcoverde - Dra. Sara Soares
             </h1>
 
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-xl">
