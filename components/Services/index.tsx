@@ -90,7 +90,7 @@ export function Services() {
             <div className="aspect-4/3 rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="/images/services-sara.jpg"
-                alt="Sara Soares - Psicóloga"
+                alt="Atendimento psicológico com TCC - Consultas individuais para adultos e crianças - Sara Soares psicóloga em Arcoverde"
                 width={600}
                 height={450}
                 className="object-cover object-top w-full h-full"

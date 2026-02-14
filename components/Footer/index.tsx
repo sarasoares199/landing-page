@@ -31,7 +31,7 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-2 mb-8">
               <Image
                 src={logo.src}
-                alt="Logo Sara Soares"
+                alt="Sara Soares - Psicóloga Clínica | Atendimento Presencial e Consultas Online | Especialista em TCC Arcoverde PE"
                 width={250}
                 height={20}
               />

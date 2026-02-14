@@ -95,7 +95,7 @@ export function Hero() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/images/hero-sara.jpg"
-                  alt="Sara Soares - Psicóloga"
+                  alt="Sara Soares - Psicóloga clínica especializada em Terapia Cognitivo-Comportamental TCC, relacionamentos, ansiedade infantil e bem-estar emocional"
                   width={600}
                   height={750}
                   className="object-cover w-full h-full"

@@ -11,7 +11,7 @@ export default function GTS() {
         rel="noopener noreferrer"
         className="cursor-pointer"
       >
-        <Image src={"/images/gts.png"} alt="logo" width={100} height={100} />
+        <Image src={"/images/gts.png"} alt="GTS Creations - Agência de design e desenvolvimento web criadora do site" width={100} height={100} />
       </Link>
     </div>
   );

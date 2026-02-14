@@ -38,7 +38,7 @@ export function About() {
             <div className="aspect-square max-w-md mx-auto lg:max-w-none rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="/images/about-sara.jpg"
-                alt="Psicóloga Sara Soares em Arcoverde Pernambuco"
+                alt="Sara Soares - Psicóloga clínica especializada em TCC, Terapia Cognitivo-Comportamental e atendimento psicológico em Arcoverde Pernambuco"
                 width={500}
                 height={500}
                 className="object-cover w-full h-full"

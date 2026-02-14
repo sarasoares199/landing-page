@@ -21,7 +21,7 @@ export const outfit = Outfit({
 });
 
 export const metadata = {
-  title: 'Psicóloga em Arcoverde - PE | Sara Soares | Terapia TCC',
+  title: 'Psicóloga em Arcoverde - PE | Dra. Sara Soares | Terapia TCC',
   description: 'Atendimento psicológico clínico e infantil em Arcoverde - PE. Especialista em TCC, ansiedade e relacionamentos. Agende sua consulta presencial ou online com a Dra. Sara Soares.',
   keywords: ['Psicóloga Arcoverde', 'Terapia TCC Arcoverde', 'Psicologia Infantil Pernambuco', 'Sara Soares Psicóloga'],
   openGraph: {
@@ -55,7 +55,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Psychologist",
-              "name": "Sara Soares - Psicóloga Clínica",
+              "name": "Psicóloga em Arcoverde - PE | Dra. Sara Soares | Terapia TCC",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Rua Dr. Carlos Howard Bradley, 35 - Centro",
